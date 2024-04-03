@@ -54,3 +54,17 @@ document.querySelector("#skip").addEventListener("click", function() {
 		console.log("skipped forward 10 seconds - timestamp is " + video.currentTime)
 	}
 });
+
+// Mute/unmute the video and update the text in the button.
+document.getElementById("mute").addEventListener("click", function() {
+	console.log("Mute clicked")
+	if (video.muted == false){
+		video.muted = true;
+		document.getElementById("mute").innerHTML = "unmute";
+	}
+	else{
+		VideoPlaybackQuality.muted = false;
+		document.getElementById("mute").innerHTML = "mute";
+		video.muted = false;
+	}
+});
