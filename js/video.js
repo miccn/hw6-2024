@@ -43,5 +43,14 @@ document.querySelector("#faster").addEventListener("click", function() {
 // length has been exceeded go back to the start of the video - no farther.
 // Log the current location of the video.
 document.querySelector("#skip").addEventListener("click", function() {
-	console.log("timestamp: "+  video.timestamp)
+	var timestampTime = video.currentTime;
+	var duration = video.duration;
+	if (timestampTime + 10 >= duration){
+		video.currentTime = 0;
+		console.log("skipped past the end - timestamp is " + video.currentTime)
+	}
+	else{
+		video.currentTime += 10;
+		console.log("skipped forward 10 seconds - timestamp is " + video.currentTime)
+	}
 });
