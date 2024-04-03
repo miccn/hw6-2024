@@ -75,7 +75,7 @@ document.querySelector("#slider").addEventListener("input", function() {
 	video.volume = document.querySelector("#slider").value / 100;
 });
 
-// Change the volume based on the slider and update the volume information.
+// Utilize the existing oldSchool class on the video element
 document.querySelector("#vintage").addEventListener("click", function() {
 	console.log("oldschool clicked")
 	video.className="oldSchool";
