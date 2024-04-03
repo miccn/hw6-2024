@@ -8,7 +8,16 @@ window.addEventListener("load", function() {
 	video.loop = false;
 });
 
-// document.querySelector("#play").addEventListener("click", function() {
-// 	console.log("Play Video");
-// });
+// play button starts to play and updates the volume information
+document.querySelector("#play").addEventListener("click", function() {
+	console.log("Play Video");
+	video.play();
+	var volume = document.getElementById("slider").value;
+	document.querySelector("#volume").innerHTML = volume;
+});
+
+document.querySelector("#pause").addEventListener("click", function() {
+	console.log("Pause Video");
+	video.pause();
+});
 
