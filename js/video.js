@@ -74,3 +74,16 @@ document.querySelector("#slider").addEventListener("input", function() {
 	document.getElementById("volume").innerHTML = document.querySelector("#slider").value;
 	video.volume = document.querySelector("#slider").value / 100;
 });
+
+// Change the volume based on the slider and update the volume information.
+document.querySelector("#vintage").addEventListener("click", function() {
+	console.log("oldschool clicked")
+	video.className="oldSchool";
+
+});
+
+// Remove the oldSchool class from the video.
+document.querySelector("#orig").addEventListener("click", function() {
+	console.log("original clicked")
+	video.className="video";
+});
