@@ -68,3 +68,9 @@ document.getElementById("mute").addEventListener("click", function() {
 		video.muted = false;
 	}
 });
+
+// Change the volume based on the slider and update the volume information.
+document.querySelector("#slider").addEventListener("input", function() {
+	document.getElementById("volume").innerHTML = document.querySelector("#slider").value;
+	video.volume = document.querySelector("#slider").value / 100;
+});
