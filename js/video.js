@@ -15,7 +15,7 @@ document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();
 	var volume = document.getElementById("slider").value;
-	document.querySelector("#volume").innerHTML = volume;
+	document.querySelector("#volume").innerHTML = volume + "%";
 });
 
 // pause the video onclick pause
@@ -60,18 +60,18 @@ document.getElementById("mute").addEventListener("click", function() {
 	console.log("Mute clicked")
 	if (video.muted == false){
 		video.muted = true;
-		document.getElementById("mute").innerHTML = "unmute";
+		document.getElementById("mute").innerHTML = "Unmute";
 	}
 	else{
 		VideoPlaybackQuality.muted = false;
-		document.getElementById("mute").innerHTML = "mute";
+		document.getElementById("mute").innerHTML = "Mute";
 		video.muted = false;
 	}
 });
 
 // Change the volume based on the slider and update the volume information.
 document.querySelector("#slider").addEventListener("input", function() {
-	document.getElementById("volume").innerHTML = document.querySelector("#slider").value;
+	document.getElementById("volume").innerHTML = document.querySelector("#slider").value + "%";
 	video.volume = document.querySelector("#slider").value / 100;
 });
 
